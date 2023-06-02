@@ -7,6 +7,8 @@ async function fetchDeleteContact(id: string){
   await contactStore.deleteContact(id)
   await contactStore.getContacts()
 }
+
+
 </script>
 
 <template>

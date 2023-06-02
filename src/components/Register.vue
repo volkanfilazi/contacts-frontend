@@ -18,14 +18,14 @@ const router = useRouter();
  }
 </script>
 <template>
-  <div class="flex flex-col gap-5 justify-center items-center h-full">
-    <input class="border-[1px] bg-transparent border-yellow-400 p-1" placeholder="name" type="text" v-model="name">
-    <input class="border-[1px] bg-transparent border-yellow-400 p-1" placeholder="email" type="text" v-model="email">
-    <input class="border-[1px] bg-transparent border-yellow-400 p-1" placeholder="password" type="text" v-model="password">
-    <button @click="useAuth.createRegister(name,email,password)" class="border-[1px] border-yellow-400 p-2 text-white">Register</button>  
+  <div class="flex flex-col gap-5 justify-center items-center h-screen">
+    <input class="border-[1px] bg-transparent border-yellow-400 rounded-lg p-2" placeholder="name" type="text" v-model="name">
+    <input class="border-[1px] bg-transparent border-yellow-400 rounded-lg p-2" placeholder="email" type="text" v-model="email">
+    <input class="border-[1px] bg-transparent border-yellow-400 rounded-lg p-2" placeholder="password" type="text" v-model="password">
+    <button @click="useAuth.createRegister(name,email,password)" class="border-[1px] rounded-lg pr-5 pl-5 border-yellow-400 p-2 text-white">Register</button>  
     <div class="flex flex-col gap-5 items-center">
       <p v-if="useAuth.registerErrorMessage" class="border-[1px] border-red-600 p-2 text-red-900">{{ useAuth.registerErrorMessage }}</p>
-      <p>go to the <span @click="goToLogin()" class="text-yellow-400 p-1">Login</span> page</p>
+      <p>go to the <span @click="goToLogin()" class="text-yellow-400 cursor-pointer p-1">Login</span> page</p>
     </div>
   </div>
 </template>
